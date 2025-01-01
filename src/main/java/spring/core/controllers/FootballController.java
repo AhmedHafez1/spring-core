@@ -9,10 +9,10 @@ import spring.core.interfaces.Coach;
 @RestController
 @RequestMapping("/football")
 public class FootballController {
-    private final Coach coach;
+    private Coach coach;
 
     @Autowired
-    public FootballController(Coach coach) {
+    public void setCoach(Coach coach) {
         this.coach = coach;
     }
 

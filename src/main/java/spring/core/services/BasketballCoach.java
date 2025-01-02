@@ -8,17 +8,17 @@ import spring.core.interfaces.Coach;
 @Component
 public class BasketballCoach implements Coach {
     public BasketballCoach() {
-        System.out.println(getClass().getName() + " inside default constructor");
+        System.out.println(getClass().getSimpleName() + " inside default constructor");
     }
 
     @PostConstruct
     public void doMyStartupStuff() {
-        System.out.println(getClass().getName() + " inside doMyStartupStuff");
+        System.out.println(getClass().getSimpleName() + " inside doMyStartupStuff");
     }
 
     @PreDestroy
     public void doMyCleanupStuff() {
-        System.out.println(getClass().getName() + " inside doMyCleanupStuff");
+        System.out.println(getClass().getSimpleName() + " inside doMyCleanupStuff");
     }
 
     @Override

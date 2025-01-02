@@ -6,7 +6,7 @@ import spring.core.interfaces.Coach;
 @Component
 public class TennisCoach implements Coach {
     public TennisCoach() {
-        System.out.println(getClass().getName() + " inside default constructor");
+        System.out.println(getClass().getSimpleName() + " inside default constructor");
     }
 
     @Override

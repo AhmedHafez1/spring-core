@@ -13,9 +13,9 @@ public class SportController {
     private final Coach coach;
 
     @Autowired
-    public SportController(@Qualifier("footballCoach") Coach coach) {
+    public SportController(@Qualifier("swimCoach") Coach coach) {
         this.coach = coach;
-        System.out.println(getClass().getName() + " inside constructor");
+        System.out.println(getClass().getSimpleName() + " inside constructor");
     }
 
     @GetMapping("/workout")

@@ -1,6 +1,7 @@
 package spring.core.services;
 
-import org.springframework.context.annotation.Primary;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Component;
 import spring.core.interfaces.Coach;
 
@@ -8,6 +9,16 @@ import spring.core.interfaces.Coach;
 public class BasketballCoach implements Coach {
     public BasketballCoach() {
         System.out.println(getClass().getName() + " inside default constructor");
+    }
+
+    @PostConstruct
+    public void doMyStartupStuff() {
+        System.out.println(getClass().getName() + " inside doMyStartupStuff");
+    }
+
+    @PreDestroy
+    public void doMyCleanupStuff() {
+        System.out.println(getClass().getName() + " inside doMyCleanupStuff");
     }
 
     @Override

@@ -4,13 +4,13 @@ import org.springframework.stereotype.Component;
 import spring.core.interfaces.Coach;
 
 @Component
-public class FootballCoach implements Coach {
-    public FootballCoach() {
+public class TennisCoach implements Coach {
+    public TennisCoach() {
         System.out.println(getClass().getName() + " inside default constructor");
     }
 
     @Override
     public String getDailyWorkout() {
-        return "Practise your kicking and passing for 30 minutes";
+        return "Practise your backhand volley for 30 minutes";
     }
 }
